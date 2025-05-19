@@ -117,3 +117,51 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+
+.slick-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: auto;
+  }
+  
+  
+  .slick-dots li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .slick-dots li button {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .slick-dots li button:before {
+    content: '●';
+    font-size: 40px;
+    line-height: 1;
+    vertical-align: middle;
+    color: #ccc;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #333;
+  }
+  
