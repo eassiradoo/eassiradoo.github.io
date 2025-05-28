@@ -118,7 +118,7 @@
     display: none;
 }
 
-.slick-dots {
+/* .slick-dots {
     position: absolute;
     bottom: 15px;
     left: 50%;
@@ -164,4 +164,4 @@
   .slick-dots li.slick-active button:before {
     color: #333;
   }
-  
+   */

@@ -4,32 +4,28 @@
   "use strict";
 
   // PRE LOADER
-  $(window).load(function () {
-    $('.preloader').delay(500).slideUp('slow'); // set duration in brackets    
-  });
+    $(window).load(function(){
+      $('.preloader').delay(500).slideUp('slow'); // set duration in brackets    
+    });
 
-  // NAVBAR
-  $(".navbar").headroom();
+    // NAVBAR
+    $(".navbar").headroom();
 
-  $('.navbar-collapse a').click(function () {
-    $(".navbar-collapse").collapse('hide');
-  });
+    $('.navbar-collapse a').click(function(){
+        $(".navbar-collapse").collapse('hide');
+    });
 
-  $('.slick-slideshow').slick({
-    autoplay: true,
-    infinite: true,
-    arrows: false,
-    fade: true,
-    dots: true,
-  });
+    $('.slick-slideshow').slick({
+      autoplay: true,
+      infinite: true,
+      arrows: false,
+      fade: true,
+      dots: true,
+    });
 
-  $('.slick-testimonial').slick({
-    dots: true,
-    arrows: false,        // <-- This adds left/right arrows
-    infinite: true,
-    speed: 300,
-    slidesToShow: 1,
-    adaptiveHeight: true
-  });
-
-})(window.jQuery);
+    $('.slick-testimonial').slick({
+      arrows: false,
+      dots: true,
+    });
+    
+  })(window.jQuery);
