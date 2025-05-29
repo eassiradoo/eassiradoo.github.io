@@ -22,6 +22,14 @@
         <link rel="stylesheet" href="css/slick.css"/>
 
         <link href="css/tooplate-little-fashion.css" rel="stylesheet">
+
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("Bmqj-CZUOJTgZHVvy");
+  })();
+</script>
+
         
     </head>
     
@@ -134,6 +142,20 @@
                             </form>
                         </div>
 
+                        <script>
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm('service_9bijqng', 'template_dpthejt', this)
+      .then(function() {
+        alert("Message sent successfully!");
+      }, function(error) {
+        alert("Failed to send message: " + JSON.stringify(error));
+      });
+  });
+</script>
+
+
                         <div class="col-lg-6 col-12 mt-5 ms-auto">
                             <div class="row">
                                 <div class="col-6 border-end contact-info">
@@ -234,7 +256,7 @@ document.querySelector('.contact-form').addEventListener('submit', function(e) {
     const message = document.getElementById('message').value.trim();
 
     const mailtoLink = `mailto:classiradoo@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+        `Name: ${name}\n\n${message}`
     )}`;
 
     window.location.href = mailtoLink;
