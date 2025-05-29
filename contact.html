@@ -146,18 +146,17 @@
                                 </div>
 
                                 <div class="col-6 contact-info">
-                                	<!-- <h6 class="mb-3">Main Studio</h6>
+                                	<h6 class="mb-3">Our Office Line</h6>
 
-                                    <a href="mailto:studio@company.com" class="custom-link">
-                                        studio@company.com
-                                        <i class="bi-arrow-right ms-2"></i> -->
+                                    <a class="custom-link">
+                                        (781) 413-7302
                                     </a>
                                 </div>
 
                                 <div class="col-6 border-top border-end contact-info">
                                     <h6 class="mb-3">Our Office</h6>
 
-                                    <p class="text-muted">446 Little Sandy Pond Rd, Plymouth, MA 02360</p>
+                                    <a class="custom-link">446 Little Sandy Pond Rd, Plymouth, MA 02360</a>
                                 </div>
 
                                 <div class="col-6 border-top contact-info">
@@ -224,5 +223,23 @@
         <script src="js/jQuery.headroom.js"></script>
         <script src="js/slick.min.js"></script>
         <script src="js/custom.js"></script>
+
+        <script>
+document.querySelector('.contact-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent default form submission
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    const mailtoLink = `mailto:classiradoo@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+    )}`;
+
+    window.location.href = mailtoLink;
+});
+</script>
+
     </body>
 </html>
